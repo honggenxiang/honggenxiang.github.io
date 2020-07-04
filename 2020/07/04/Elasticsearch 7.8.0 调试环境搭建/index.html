@@ -79,13 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://honggenxiang.github.io/index.html">
+<meta name="description" content="Elasticsearch 7.8.0 调试环境搭建1.环境准备 Elasticsearch 源码版本 7.8.0 jdk版本 14.0.1 Gradle 6.5.1 IDEA 2020.1 OS 为 macOS Catalina Version 10.15.5  2.源码下载1234## clone elasticsearch源码git clone https:&#x2F;&#x2F;github.com&#x2F;ela">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elasticsearch 7.8.0 调试环境搭建">
+<meta property="og:url" content="https://honggenxiang.github.io/2020/07/04/Elasticsearch%207.8.0%20%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Elasticsearch 7.8.0 调试环境搭建1.环境准备 Elasticsearch 源码版本 7.8.0 jdk版本 14.0.1 Gradle 6.5.1 IDEA 2020.1 OS 为 macOS Catalina Version 10.15.5  2.源码下载1234## clone elasticsearch源码git clone https:&#x2F;&#x2F;github.com&#x2F;ela">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggf0als5s1j31ct0u0gt7.jpg">
+<meta property="article:published_time" content="2020-07-04T08:07:08.471Z">
+<meta property="article:modified_time" content="2020-07-04T08:12:20.905Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggf0als5s1j31ct0u0gt7.jpg">
 
 
 
@@ -115,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://honggenxiang.github.io/"/>
+  <link rel="canonical" href="https://honggenxiang.github.io/2020/07/04/Elasticsearch 7.8.0 调试环境搭建/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Elasticsearch 7.8.0 调试环境搭建 | Hexo</title>
   
 
 
@@ -140,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +219,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/04/Elasticsearch%207.8.0%20%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url">Elasticsearch 7.8.0 调试环境搭建</a></h1>
+          <h1 class="post-title" itemprop="name headline">Elasticsearch 7.8.0 调试环境搭建</h1>
         
 
         <div class="post-meta">
@@ -298,8 +301,7 @@
       
 
       
-        
-          <hr>
+        <hr>
 <h2 id="Elasticsearch-7-8-0-调试环境搭建"><a href="#Elasticsearch-7-8-0-调试环境搭建" class="headerlink" title="Elasticsearch 7.8.0 调试环境搭建"></a>Elasticsearch 7.8.0 调试环境搭建</h2><h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h2><ul>
 <li>Elasticsearch 源码版本 7.8.0</li>
 <li>jdk版本 14.0.1</li>
@@ -308,14 +310,39 @@
 <li>OS 为 macOS Catalina Version 10.15.5</li>
 </ul>
 <h2 id="2-源码下载"><a href="#2-源码下载" class="headerlink" title="2.源码下载"></a>2.源码下载</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># clone elasticsearch源码</span></span></span><br><span class="line">git clone https://github.com/elastic/elasticsearch.git</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 切换到目标版本tag v7.8.0</span></span></span><br><span class="line">git checkout v7.8.0</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/04/Elasticsearch%207.8.0%20%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+
+<a id="more"></a>
+
+<h2 id="3-导入IDEA"><a href="#3-导入IDEA" class="headerlink" title="3.导入IDEA"></a>3.导入IDEA</h2><blockquote>
+<p>参考文档:<a href="https://github.com/elastic/elasticsearch/blob/v7.8.0/CONTRIBUTING.md" target="_blank" rel="noopener">https://github.com/elastic/elasticsearch/blob/v7.8.0/CONTRIBUTING.md</a></p>
+</blockquote>
+<ol>
+<li>选择 <code>文件</code>-&gt;<code>打开</code></li>
+<li>在文件选择框中选择Elasticsearch的根目录，及<code>build.gradle</code>所在目录</li>
+<li>在接下的弹框中选择<code>以项目打开</code></li>
+</ol>
+<!--注意:导入后项目的JDK版本选择14,否则项目无法正常编译 -->
+
+<h2 id="4-运行"><a href="#4-运行" class="headerlink" title="4.运行"></a>4.运行</h2><p>启动类为模块 <code>server</code>的类  <code>org.elasticsearch.bootstrap.Elasticsearch</code></p>
+<h3 id="异常1"><a href="#异常1" class="headerlink" title="异常1"></a>异常1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR: the system property [es.path.conf] must be set</span><br></pre></td></tr></table></figure>
+
+<p>elasticsearch启动需要elasticsearch.yml以及jvm等配置。为了方便，可官网下载 7.8.0 版本的 elasticsearch 解压，将<code>es.path.confg</code>配置到根目录中的 config 文件夹</p>
+<h3 id="异常2"><a href="#异常2" class="headerlink" title="异常2"></a>异常2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Exception in thread &quot;main&quot; java.lang.IllegalStateException: path.home is not configured</span><br></pre></td></tr></table></figure>
+
+<p>将 path.home 配置为 elasticsearch 7.8.0 编译包解压后的根目录</p>
+<h3 id="异常3"><a href="#异常3" class="headerlink" title="异常3"></a>异常3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main ERROR Could not register mbeans java.security.AccessControlException: access denied (&quot;javax.management.MBeanTrustPermission&quot; &quot;register&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>jmx权限问题，可jvm参数关闭，如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Dlog4j2.disable.jmx&#x3D;true</span><br></pre></td></tr></table></figure>
+
+<h3 id="异常4"><a href="#异常4" class="headerlink" title="异常4"></a>异常4</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ERROR][o.e.b.ElasticsearchUncaughtExceptionHandler] [] fatal error in thread [main], exiting</span><br><span class="line">java.lang.NoClassDefFoundError: org&#x2F;elasticsearch&#x2F;plugins&#x2F;ExtendedPluginsClassLoader</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggf0als5s1j31ct0u0gt7.jpg" alt=""></p>
+<p>需要打开 provided级别的依赖</p>
+<p>最后的jvm启动参数为</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">-Des.path.home=&#123;目录&#125;/elasticsearch-7.8.0</span></span><br><span class="line"><span class="string">-Des.path.conf=&#123;目录&#125;/elasticsearch-7.8.0/config</span></span><br><span class="line"><span class="string">-Dlog4j2.disable.jmx=true</span></span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -332,144 +359,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://honggenxiang.github.io/2020/07/04/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/04/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-04T14:51:55+08:00">
-                2020-07-04
-              </time>
+              <a href="/2020/07/04/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -479,10 +390,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -490,6 +402,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -510,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -553,6 +478,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Elasticsearch-7-8-0-调试环境搭建"><span class="nav-number">1.</span> <span class="nav-text">Elasticsearch 7.8.0 调试环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-环境准备"><span class="nav-number">2.</span> <span class="nav-text">1.环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-源码下载"><span class="nav-number">3.</span> <span class="nav-text">2.源码下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-导入IDEA"><span class="nav-number">4.</span> <span class="nav-text">3.导入IDEA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-运行"><span class="nav-number">5.</span> <span class="nav-text">4.运行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异常1"><span class="nav-number">5.1.</span> <span class="nav-text">异常1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常2"><span class="nav-number">5.2.</span> <span class="nav-text">异常2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常3"><span class="nav-number">5.3.</span> <span class="nav-text">异常3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常4"><span class="nav-number">5.4.</span> <span class="nav-text">异常4</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -686,6 +627,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
